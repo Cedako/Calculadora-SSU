@@ -1,0 +1,12 @@
+{
+    "name":"Calculadora SSU",
+    "short_name":"Calculadora SSU",
+    "description":"Calculadora de Servicio Social Universitario",
+    "background_color":"#00ffc8",
+    "theme_color":"#000000",
+    "orientation":"portrait",
+    "display":"standalone",
+    "start_url":"./?utm_source=web_app_manifest",
+    "scope":"./",
+    "lang":"es-MX"
+}
