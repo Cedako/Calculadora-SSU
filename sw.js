@@ -23,12 +23,14 @@ self.addEventListener('activate', e=>{
 
     e.waitUntil(
         caches.keys()
-        .then(cachesNames=>{
+        .then(cacheNames=>{
+            return Promise.all(
             cacheNames.map(cacheName=>{
                 if(cacheWhitelist.indexOf(cacheName) === -1){
                     return caches.delete(cacheName)
                 }
             })
+            )
         })
         .then(()=>self.clients.claim())
     )
