@@ -9,10 +9,10 @@
 }
 
 .calculadora td button{
-    display: horizontal block;
+    display: horizontal;
     width: 23%;
     height: 60px;
-    font-size: 25px;
+    font-size: 150%;
 }
 #resultado{
     display: block;
