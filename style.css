@@ -10,7 +10,7 @@
 
 .calculadora td button{
     display: horizontal;
-    width: 23%;
+    width: 50px;
     height: 60px;
     font-size: 150%;
 }
