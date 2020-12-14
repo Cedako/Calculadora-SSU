@@ -1,6 +1,7 @@
 ;
 const CACHE_NAME='v1_cache_calculadora',
 urlsToCache=[
+    './',
     './style.css',
     './calculadora.js',
     './img/SSU.png'
@@ -23,8 +24,8 @@ self.addEventListener('activate', e=>{
     e.waitUntil(
         caches.keys()
         .then(cachesNames=>{
-            cachesNames.map(cacheName=>{
-                if(cacheWhitelist.indexOf(cacheName)===-1){
+            cacheNames.map(cacheName=>{
+                if(cacheWhitelist.indexOf(cacheName) === -1){
                     return caches.delete(cacheName)
                 }
             })
@@ -36,12 +37,12 @@ self.addEventListener('activate', e=>{
 self.addEventListener('fetch', e=>{
     e.respondWith(
         caches.match(e.request)
-        .then(res=>{
+        .then(res =>{
             if(res){
                 return res
             }
-
-            return fetch(e.request)
+            
+            return fetch(e.request);
         })
     )
 })
